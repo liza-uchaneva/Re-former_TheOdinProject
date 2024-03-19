@@ -1,0 +1,50 @@
+<h1>Sign Up</h1>
+<!-- <form action="/users" method="post" accept-charset="UTF-8">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <p>
+        <label for="uname">User name:</label>
+        <input type="text" id="uname" name="user[username]"><br>
+    </p>
+    <p>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="user[email]">
+    </p>
+    <p>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="user[password]">
+    </p>   
+    <input type="submit" value="Submit">
+</form>  
+
+<%= form_tag("/users", method: "post") do %>
+  <%= label_tag(:username, "Username") %><br>
+  <%= text_field_tag(:username) %><br><br>
+  <%= label_tag(:email, "Email") %><br>
+  <%= email_field(:email, :address)%><br><br>
+  <%= label_tag(:password, "Password") %><br>
+  <%= password_field_tag(:password) %><br><br>
+  <%= submit_tag ("Submit") %>
+<% end %> 
+
+<%= form_with model: @user do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.label :username, "Your user name here" %>
+  <%= form.text_field :username %><br><br>
+  <%= form.label :email, "Email" %>
+  <%= form.email_field :email, placeholder: "example@example.com" %><br><br>
+  <%= form.label :password, "Password" %>
+  <%= form.password_field :password %><br><br>
+  <%= form.submit %>
+<% end %> -->
+
+<%= render "form" %>
